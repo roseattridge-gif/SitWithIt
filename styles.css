@@ -1,17 +1,16 @@
 :root {
-  --ink: #11161d;
-  --ink-soft: #25313d;
-  --night: #06111f;
-  --night-2: #0a1f34;
-  --cyan: #008bc2;
-  --cyan-bright: #7fe4ff;
-  --silver: #dce3e8;
-  --paper: #f7f4ed;
-  --paper-deep: #ebe3d6;
-  --bone: #fffdf8;
-  --clay: #9f6d55;
-  --moss: #677664;
-  --line: rgba(17, 22, 29, .14);
+  --ink: #29221f;
+  --ink-soft: #554b46;
+  --night: #352d2a;
+  --night-2: #493d38;
+  --accent: #a25e4b;
+  --accent-soft: #d6a28f;
+  --paper: #f4eee5;
+  --paper-deep: #e9ddd0;
+  --bone: #fffaf3;
+  --clay: #a25e4b;
+  --moss: #727b69;
+  --line: rgba(41, 34, 31, .15);
   --line-light: rgba(255, 255, 255, .16);
   --shadow: 0 24px 80px rgba(6, 17, 31, .18);
 }
@@ -95,7 +94,7 @@ h3 {
 
 .wordmark small {
   margin-top: 5px;
-  color: var(--cyan);
+  color: var(--accent);
   font-size: .58rem;
   font-weight: 600;
   letter-spacing: .22em;
@@ -125,7 +124,7 @@ h3 {
 
 .site-header.scrolled .wordmark small,
 .site-header.menu-open .wordmark small {
-  color: var(--cyan-bright);
+  color: var(--accent-soft);
 }
 
 .site-header.scrolled .nav-cta,
@@ -146,7 +145,7 @@ h3 {
   align-items: end;
   background:
     linear-gradient(90deg, rgba(247, 244, 237, .98) 0%, rgba(247, 244, 237, .93) 34%, rgba(247, 244, 237, .58) 62%, rgba(247, 244, 237, .38) 100%),
-    url("https://sit-with-it.roseattridge.chatgpt.site/assets/sit-with-it-journal-mockup-corrected-D-GEK0Gi.png") center right / cover no-repeat,
+    url("assets/sit-with-it-journal-mockup-corrected.png") center right / cover no-repeat,
     var(--paper);
 }
 
@@ -177,7 +176,7 @@ h3 {
 }
 
 .eyebrow {
-  color: var(--cyan);
+  color: var(--accent);
   font-size: .68rem;
   font-weight: 600;
   letter-spacing: .24em;
@@ -185,14 +184,23 @@ h3 {
 }
 
 .hero .eyebrow {
-  color: var(--cyan);
+  color: var(--accent);
   margin-bottom: 1.35rem;
 }
 
 .hero h1 {
   max-width: 960px;
-  margin: 0 0 2rem;
+  margin: 0 0 .7rem;
   font-size: clamp(4rem, 8.2vw, 8.9rem);
+}
+
+.hero-line {
+  max-width: 680px;
+  margin-bottom: 1.5rem;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2rem, 3.7vw, 4.1rem);
+  font-weight: 500;
+  line-height: 1;
 }
 
 .hero-text {
@@ -268,17 +276,13 @@ h3 {
   color: rgba(255, 255, 255, .48);
 }
 
-.intro-grid,
-.ecosystem-layout,
-.science-layout {
+.intro-grid {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(320px, 600px);
   gap: clamp(3rem, 8vw, 9rem);
 }
 
 .intro h2,
-.science h2,
-.ecosystem h2,
 .launch h2 {
   margin-bottom: 0;
   font-size: clamp(3.1rem, 6vw, 6.6rem);
@@ -297,16 +301,16 @@ h3 {
   font-size: 1.25em;
 }
 
-.production-strip {
+.promise-strip {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1px;
   margin-top: 5rem;
   border: 1px solid var(--line);
   background: var(--line);
 }
 
-.production-strip span {
+.promise-strip span {
   min-height: 86px;
   display: grid;
   place-items: center;
@@ -332,7 +336,7 @@ h3 {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(135deg, rgba(127, 228, 255, .12), transparent 46%),
+    linear-gradient(135deg, rgba(214, 162, 143, .14), transparent 46%),
     linear-gradient(rgba(255, 255, 255, .025) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, .02) 1px, transparent 1px);
   background-size: auto, 72px 72px, 72px 72px;
@@ -359,7 +363,7 @@ h3 {
 }
 
 .theme-grid span {
-  color: var(--cyan-bright);
+  color: var(--accent-soft);
   font-size: .68rem;
   font-weight: 600;
   letter-spacing: .18em;
@@ -375,56 +379,177 @@ h3 {
   color: rgba(255, 255, 255, .68);
 }
 
-.science {
+.ritual {
   background: var(--bone);
 }
 
-.science-copy {
-  color: var(--ink-soft);
+.states-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, .6fr);
+  gap: clamp(2rem, 8vw, 9rem);
+  align-items: end;
+  margin-bottom: 4rem;
+}
+
+.states-heading h2 {
+  max-width: 760px;
+  margin: 0;
+  font-size: clamp(3rem, 5.4vw, 6rem);
+}
+
+.states-heading p {
+  max-width: 480px;
+  margin: 0;
+  color: rgba(255, 255, 255, .62);
   font-size: 1.08rem;
 }
 
-.science-copy p + p { margin-top: 1.35rem; }
+.ritual-layout {
+  display: grid;
+  grid-template-columns: minmax(0, .75fr) minmax(320px, 1fr);
+  gap: clamp(3rem, 8vw, 9rem);
+}
 
-.ecosystem-copy p {
-  max-width: 42rem;
+.ritual h2,
+.gift h2,
+.author-note blockquote {
+  margin: 0;
+  font-size: clamp(3rem, 5.6vw, 6.2rem);
+}
+
+.ritual-intro {
+  max-width: 540px;
   margin-top: 1.6rem;
   color: var(--ink-soft);
   font-size: 1.08rem;
 }
 
-.orbit {
+.ritual-steps {
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--line);
+  list-style: none;
+}
+
+.ritual-steps li {
   display: grid;
-  gap: 1px;
-  align-self: start;
-  background: var(--line);
-  border: 1px solid var(--line);
-  box-shadow: var(--shadow);
+  grid-template-columns: 48px 180px 1fr;
+  gap: 1rem;
+  align-items: baseline;
+  padding: 1.7rem 0;
+  border-bottom: 1px solid var(--line);
 }
 
-.orbit div {
-  display: flex;
-  min-height: 124px;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
-  padding: 1.3rem 1.5rem;
-  background: rgba(255, 253, 248, .78);
+.ritual-steps span {
+  color: var(--accent);
+  font-size: .66rem;
+  font-weight: 600;
+  letter-spacing: .16em;
 }
 
-.orbit strong {
+.ritual-steps strong {
   font-family: "Cormorant Garamond", serif;
-  font-size: 2rem;
+  font-size: 1.65rem;
   font-weight: 500;
 }
 
-.orbit span {
-  max-width: 12rem;
-  color: rgba(17, 22, 29, .56);
+.ritual-steps p {
+  margin: 0;
+  color: var(--ink-soft);
+}
+
+.care-note {
+  display: grid;
+  grid-template-columns: minmax(180px, .35fr) 1fr;
+  gap: 2rem;
+  margin-top: 5rem;
+  padding: 1.7rem 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.care-note strong {
+  color: var(--accent);
+  font-size: .72rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.care-note p {
+  max-width: 760px;
+  margin: 0;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(1.4rem, 2.3vw, 2.2rem);
+  line-height: 1.22;
+}
+
+.gift { background: var(--paper-deep); }
+
+.gift-layout {
+  display: grid;
+  grid-template-columns: minmax(300px, .9fr) minmax(0, .8fr);
+  gap: clamp(3rem, 8vw, 8rem);
+  align-items: center;
+}
+
+.gift-image {
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.gift-image img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.gift-copy p:not(.eyebrow) {
+  margin-top: 1.6rem;
+  color: var(--ink-soft);
+  font-size: 1.08rem;
+}
+
+.gift-copy ul {
+  margin: 2rem 0 0;
+  padding: 0;
+  border-top: 1px solid var(--line);
+  list-style: none;
+}
+
+.gift-copy li {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.author-note { background: var(--paper); }
+
+.author-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(300px, .6fr);
+  gap: clamp(3rem, 8vw, 9rem);
+  align-items: start;
+}
+
+.author-note blockquote {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
+  line-height: .98;
+}
+
+.author-layout > div {
+  color: var(--ink-soft);
+  font-size: 1.08rem;
+}
+
+.author-layout a {
+  display: inline-flex;
+  gap: .7rem;
+  margin-top: 1.3rem;
+  color: var(--accent);
   font-size: .72rem;
   font-weight: 600;
   letter-spacing: .12em;
-  text-align: right;
   text-transform: uppercase;
 }
 
@@ -501,7 +626,7 @@ input::placeholder { color: rgba(17, 22, 29, .42); }
 .site-footer p { margin: 0; }
 
 .site-footer a {
-  color: var(--cyan-bright);
+  color: var(--accent-soft);
   font-weight: 600;
   letter-spacing: .12em;
   text-transform: uppercase;
@@ -566,8 +691,10 @@ input::placeholder { color: rgba(17, 22, 29, .42); }
   .hero h1 { font-size: clamp(3.25rem, 14vw, 5.5rem); }
 
   .intro-grid,
-  .ecosystem-layout,
-  .science-layout,
+  .states-heading,
+  .ritual-layout,
+  .gift-layout,
+  .author-layout,
   .launch {
     grid-template-columns: 1fr;
   }
@@ -581,9 +708,19 @@ input::placeholder { color: rgba(17, 22, 29, .42); }
   .section-label { margin-bottom: 3.2rem; }
 
   .theme-grid,
-  .production-strip {
+  .promise-strip {
     grid-template-columns: 1fr;
   }
+
+  .ritual-steps li {
+    grid-template-columns: 42px 1fr;
+  }
+
+  .ritual-steps p {
+    grid-column: 2;
+  }
+
+  .care-note { grid-template-columns: 1fr; }
 
   .theme-grid article { min-height: 240px; }
 }
@@ -594,23 +731,13 @@ input::placeholder { color: rgba(17, 22, 29, .42); }
     padding-left: 5vw;
     background:
       linear-gradient(180deg, rgba(247, 244, 237, .96) 0%, rgba(247, 244, 237, .88) 56%, rgba(247, 244, 237, .72) 100%),
-      url("https://sit-with-it.roseattridge.chatgpt.site/assets/sit-with-it-journal-mockup-corrected-D-GEK0Gi.png") 63% center / cover no-repeat,
+      url("assets/sit-with-it-journal-mockup-corrected.png") 63% center / cover no-repeat,
       var(--paper);
   }
 
   .button { width: 100%; }
 
   .form-row { grid-template-columns: 1fr; }
-
-  .orbit div {
-    display: block;
-  }
-
-  .orbit span {
-    display: block;
-    margin-top: .4rem;
-    text-align: left;
-  }
 
   .site-footer {
     display: block;
